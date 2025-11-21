@@ -88,6 +88,40 @@ system/etc/permissions/privapp-permissions-com.samsung.android.app.updatecenter.
 system/priv-app/AppUpdateCenter
 "
 
+# AREmoji
+SYSTEM_DEBLOAT+="
+system/priv-app/AREmoji
+system/priv-app/AREmojiEditor
+system/priv-app/AvatarEmojiSticker
+system/cameradata/aremoji-feature.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.aremojieditor.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.aremoji.xml
+system/etc/permissions/com.samsung.feature.aremoji_v2.xml
+"
+
+# Bixby
+SYSTEM_DEBLOAT+="
+system/priv-app/Bixby
+system/priv-app/BixbyInterpreter
+system/priv-app/BixbyVisionFramework3.5
+system/priv-app/BixbyVisionFramework3.7
+system/app/BixbyWakeup
+system/system/etc/sysconfig/bixbyagent.xml
+system/etc/preferred-apps/com.samsung.android.bixby.agent.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.bixby.agent.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.bixby.wakeup.xml
+system/etc/permissions/signature-permissions-com.samsung.android.bixby.agent.xml
+system/app/VisionIntelligence3.7
+system/etc/permissions/signature-permissions-com.samsung.android.visionintelligence_v3.7.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.visionintelligence_v3.7.xml
+"
+
+# BBCAgent
+SYSTEM_DEBLOAT+="
+system/app/BBCAgent
+system/etc/permissions/com.samsung.bbc.xml
+"
+
 # BCService
 SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.sec.bcservice.xml
@@ -139,6 +173,11 @@ SYSTEM_DEBLOAT+="
 system/app/PlayAutoInstallConfig
 "
 
+# Hiya
+SYSTEM_DEBLOAT+="
+system/app/HiyaService
+"
+
 # HwModuleTest
 SYSTEM_DEBLOAT+="
 system/app/Cameralyzer
@@ -151,6 +190,12 @@ system/etc/permissions/privapp-permissions-com.samsung.android.providers.factory
 system/etc/permissions/privapp-permissions-com.sec.facatfunction.xml
 system/priv-app/FacAtFunction
 system/priv-app/FactoryTestProvider
+"
+
+# KidsHome
+SYSTEM_DEBLOAT+="
+system/app/KidsHome_Installer
+system/etc/permissions/signature-permissions-com.sec.android.app.kidshome.xml
 "
 
 # Language packs
@@ -166,6 +211,7 @@ system/priv-app/LedCoverService
 # Replace full apk with stub apk to save space
 SYSTEM_DEBLOAT+="
 system/priv-app/YourPhone_P1_5
+system/app/MdxKitService
 "
 
 # Live Transcribe
@@ -195,6 +241,13 @@ SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.mygalaxy.service.xml
 system/etc/sysconfig/preinstalled-packages-com.mygalaxy.service.xml
 system/priv-app/MyGalaxyService
+"
+
+# OMC (Recommended apps)
+SYSTEM_DEBLOAT+="
+system/priv-app/OMCAgent5
+system/etc/omc-default-permissions
+system/etc/permissions/privapp-permissions-com.samsung.android.app.omcagent.xml
 "
 
 # Samsung Analytics
@@ -338,6 +391,16 @@ system/priv-app/SVCAgent
 # SVoiceIME
 SYSTEM_DEBLOAT+="
 system/priv-app/SVoiceIME
+"
+
+# Themes
+SYSTEM_DEBLOAT+="
+system/priv-app/ThemeStore
+system/priv-app/ThemeCenter
+system/etc/permissions/privapp-permissions-com.samsung.android.themecenter.xml
+system/etc/default-permissions/default-permissions-com.samsung.android.themestore.xml
+system/etc/permissions/privapp-permissions-com.samsung.android.themestore.xml
+system/etc/permissions/signature-permissions-com.samsung.android.themestore.xml
 "
 
 # Voice Access
