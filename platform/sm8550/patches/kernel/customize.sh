@@ -1,7 +1,6 @@
 LOG_STEP_IN "- Processing Custom common kernel by @Edgars-cirulis"
 
 PDR="$(pwd)"
-DMXQ="dm1q dm2q dm3q"
 KERNEL_URL="https://github.com/voltage-dmxq/edgars-sm8550-kernel/releases/latest/download/DMXQ-KERNEL.ZIP"
 BOOT_EDITOR_URL="https://github.com/cfig/Android_boot_image_editor/releases/download/v15_r1/boot_editor_v15_r1.zip"
 KERNELSU_MANAGER_APK="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.1.1/KernelSU_Next_v1.1.1_12851-release.apk"
@@ -53,11 +52,7 @@ ADD_MANAGER_APK_TO_PRELOAD()
     done <<< "$(find "$WORK_DIR/system/system/preload" -name "*.apk" | sort)"
 }
 
-if grep -q -w "$TARGET_CODENAME" <<< "$DMXQ" ; then
-    LOG "- Device is a dmxq, adding custom kernel"
-    REPLACE_KERNEL_BINARIES
-    ADD_MANAGER_APK_TO_PRELOAD    
-else
-    LOGW "\"$TARGET_CODENAME\" is not a dmxq, Skipping..."
-fi
+REPLACE_KERNEL_BINARIES
+ADD_MANAGER_APK_TO_PRELOAD    
+
 unset PDR DMXQ KERNEL_URL BOOT_EDITOR_URL
