@@ -7,6 +7,7 @@ system/lib64/libaiclearzoomraw_wrapper_v1.camera.samsung.so
 system/lib64/libmacroclearshot_raw.arcsoft.so
 system/lib64/libmacroclearshot_raw_wrapper_v1.camera.samsung.so
 system/lib64/libsuperresolution_raw.arcsoft.so
+system/lib64/libsimba.media.samsung.so
 "
 for blob in $BLOBS_LIST
 do
