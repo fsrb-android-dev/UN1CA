@@ -54,7 +54,8 @@ etc/init/vendor_flash_recovery.rc
 
 # PDP apps
 SYSTEM_DEBLOAT+="
-system/preload
+system/preload/Tips
+system/preload/Facebook_stub_preload
 "
 
 truncate -s 0 "$WORK_DIR/system/system/etc/vpl_apks_count_list.txt"
