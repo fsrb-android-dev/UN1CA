@@ -114,12 +114,6 @@ if [[ "$SOURCE_PRODUCT_SHIPPING_API_LEVEL" != "$TARGET_PRODUCT_SHIPPING_API_LEVE
         > /dev/null
 fi
 
-# SEC_PRODUCT_FEATURE_KNOX_SUPPORT_SDP
-APPLY_PATCH "system" "system/framework/framework.jar" \
-    "$MODPATH/sdp/framework.jar/0001-Nuke-Knox-SDP.patch"
-APPLY_PATCH "system" "system/framework/services.jar" \
-    "$MODPATH/sdp/services.jar/0001-Nuke-Knox-SDP.patch"
-
 # SEC_PRODUCT_FEATURE_KNOX_SUPPORT_DUAL_DAR
 APPLY_PATCH "system" "system/app/Traceur/Traceur.apk" \
     "$MODPATH/ddar/Traceur.apk/0001-Nuke-Knox-DualDAR.patch"
@@ -129,8 +123,6 @@ APPLY_PATCH "system" "system/framework/framework.jar" \
     "$MODPATH/ddar/framework.jar/0002-Nuke-MDF.patch"
 APPLY_PATCH "system" "system/framework/knoxsdk.jar" \
     "$MODPATH/ddar/knoxsdk.jar/0001-Nuke-Knox-DualDAR.patch"
-APPLY_PATCH "system" "system/framework/services.jar" \
-    "$MODPATH/ddar/services.jar/0001-Nuke-Knox-DualDAR.patch"
 APPLY_PATCH "system" "system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk" \
     "$MODPATH/ddar/DeviceDiagnostics.apk/0001-Nuke-Knox-DualDAR.patch"
 APPLY_PATCH "system" "system/priv-app/KnoxCore/KnoxCore.apk" \
@@ -189,8 +181,6 @@ if [[ "$SOURCE_PRODUCT_SHIPPING_API_LEVEL" != "$TARGET_PRODUCT_SHIPPING_API_LEVE
         > /dev/null
 fi
 # TODO nuke HdmVendorController.smali
-APPLY_PATCH "system" "system/framework/services.jar" \
-    "$MODPATH/hdm/services.jar/0001-Nuke-Knox-HDM.patch"
 SMALI_PATCH "system" "system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk" \
     "smali/com/samsung/android/knox/hdm/HdmManager.smali" "replaceall" \
     "$HDM_VERSION" \

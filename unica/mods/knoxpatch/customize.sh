@@ -27,8 +27,6 @@ APPLY_PATCH "system" "system/framework/knoxsdk.jar" \
 SMALI_PATCH "system" "system/framework/samsungkeystoreutils.jar" \
     "smali/com/samsung/android/security/keystore/AttestParameterSpec.smali" "return" \
     'isVerifiableIntegrity()Z' 'true'
-APPLY_PATCH "system" "system/framework/services.jar" \
-    "$MODPATH/services.jar/0001-Bypass-ICD-verification.patch"
 
 # Disable SAK in DarManagerService
 APPLY_PATCH "system" "system/framework/services.jar" \
