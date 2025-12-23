@@ -41,11 +41,15 @@ while [ "$#" != 0 ]; do
         fi
         if tail "$1" | grep -q "SignerVer02"; then
             LOG "- Removing Samsung footer signature from $(basename "$1")"
-            truncate -s -512 "$1"
+            FILE_SIZE=$(stat -c%s "$1")
+	    NEW_SIZE=$((FILE_SIZE - 512))
+	    dd if="$1" bs=1 count=$NEW_SIZE of="${1}.tmp" 2>/dev/null && mv "${1}.tmp" "$1"
         fi
         if tail "$1" | grep -q "SignerVer03"; then
             LOG "- Removing Samsung footer signature from $(basename "$1")"
-            truncate -s -784 "$1"
+            FILE_SIZE=$(stat -c%s "$1")
+	    NEW_SIZE=$((FILE_SIZE - 784))
+	    dd if="$1" bs=1 count=$NEW_SIZE of="${1}.tmp" 2>/dev/null && mv "${1}.tmp" "$1"
         fi
     fi
 
