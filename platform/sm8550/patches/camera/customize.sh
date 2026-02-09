@@ -9,6 +9,7 @@ system/lib64/libaiclearzoom_raw.arcsoft.so
 system/lib64/libaiclearzoomraw_wrapper_v1.camera.samsung.so
 system/lib64/libsuperresolutionraw_wrapper_v2.camera.samsung.so
 system/lib64/libsuperresolution_raw.arcsoft.so
+system/lib64/libae_bracket_hdr.arcsoft.so
 "
 for blob in $BLOBS_LIST
 do
