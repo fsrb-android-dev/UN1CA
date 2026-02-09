@@ -1,9 +1,9 @@
 LOG_STEP_IN "- Processing Custom common kernel by @Edgars-cirulis"
 
 PDR="$(pwd)"
-KERNEL_URL="https://github.com/fsrb-android-dev/edgars-sm8550-kernel/releases/download/10/DMXQ-KERNEL.ZIP"
+KERNEL_URL="https://github.com/fsrb-android-dev/edgars-sm8550-kernel/releases/download/23/DMXQ-KERNEL-KSU.ZIP"
 BOOT_EDITOR_URL="https://github.com/cfig/Android_boot_image_editor/releases/download/v15_r1/boot_editor_v15_r1.zip"
-KERNELSU_MANAGER_APK="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.1.1/KernelSU_Next_v1.1.1_12851-release.apk"
+KERNELSU_MANAGER_APK="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.0.1/KernelSU_Next_v3.0.1_32967-release.apk"
 
 REPLACE_KERNEL_BINARIES()
 {
